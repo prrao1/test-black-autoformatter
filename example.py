@@ -8,10 +8,7 @@ label_map = {"anxiety": 0, "depression": 1, "positive_mood": 2, "negative_mood":
 
 # Example SQL queries
 selection_query = (
-    "SELECT JID, Journal FROM `journal` "
-    "WHERE status = %(unique_timestamp)s "
+    "SELECT JID, Journal FROM `journal` " "WHERE status = %(unique_timestamp)s "
 )
 # Example SQL queries
-insertion_query = (
-    "INSERT IGNORE INTO `journal_analysis` (JID, AnalysisValue, Flag, Indicators) VALUES (%(JID)s, %(AnalysisValue)s, %(Flag)s, %(Indicators)s) "
-)
+insertion_query = "INSERT IGNORE INTO `journal_analysis` (JID, AnalysisValue, Flag, Indicators) VALUES (%(JID)s, %(AnalysisValue)s, %(Flag)s, %(Indicators)s) "
