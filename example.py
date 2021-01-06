@@ -12,3 +12,5 @@ selection_query = (
 )
 # Example SQL queries
 insertion_query = "INSERT IGNORE INTO `journal_analysis` (JID, AnalysisValue, Flag, Indicators) VALUES (%(JID)s, %(AnalysisValue)s, %(Flag)s, %(Indicators)s) "
+
+# Test
