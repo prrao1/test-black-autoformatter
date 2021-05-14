@@ -3,7 +3,7 @@ name: Black Code Formatting
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   pr-lint:
