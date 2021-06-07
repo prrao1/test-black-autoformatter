@@ -1,14 +1,26 @@
-name: Black Code Formatting
+name: Consistent linting with flake8 and black
 
-on: [pull_request]
+on: pull_request
 
 jobs:
-  black:
+  run-linters:
+    name: Run linters
     runs-on: ubuntu-latest
-    name: Black
+
     steps:
-      - uses: actions/checkout@v2
+      - name: Check out Git repository
+        uses: actions/checkout@v2
+
       - name: Set up Python
-        uses: actions/setup-python@v2
-      - name: Black
-        uses: psf/black@20.8b1  # already includes args "--check --diff"
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.9
+
+      - name: Install Python dependencies
+        run: pip install black flake8
+
+      - name: Run linters
+        uses: wearerequired/lint-action@v1
+        with:
+          black: true
+          flake8: true
