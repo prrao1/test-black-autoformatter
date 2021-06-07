@@ -11,4 +11,4 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
       - name: Black
-        uses: psf/black@21.5b2  # already includes args "--check --diff"
+        uses: psf/black@20.8b1  # already includes args "--check --diff"
