@@ -1,9 +1,6 @@
 name: Black Code Formatting
 
-on:
-  push:
-    branches:
-      - main
+on: [pull_request]
 
 jobs:
   pr-lint:
