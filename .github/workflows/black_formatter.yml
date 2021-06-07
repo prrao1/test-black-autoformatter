@@ -1,6 +1,11 @@
 name: Black Code Formatting on PR
 
-on: [pull_request]
+on:
+  pull_request:
+    branches:
+      - main
+      - staging
+      - dev
 
 jobs:
   pr-lint:
@@ -8,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         name: Checkout
-      - uses: Ahuge/black-action@v1.0.2
+      - uses: prrao87/black-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BLACK_ARGS: "."
