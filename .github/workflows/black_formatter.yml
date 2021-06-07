@@ -1,17 +1,14 @@
 name: Black Code Formatting
 
-on:
-  pull_request:
-    branches:
-      - main
+on: [pull_request]
 
 jobs:
-  pr-lint:
+  black:
     runs-on: ubuntu-latest
+    name: Black
     steps:
       - uses: actions/checkout@v2
-        name: Checkout
-      - uses: prrao87/black-action@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BLACK_ARGS: "."
+      - name: Set up Python
+        uses: actions/setup-python@v2
+      - name: Black
+        uses: psf/black@21.5b2  # already includes args "--check --diff"
