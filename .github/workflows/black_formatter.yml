@@ -1,11 +1,9 @@
 name: Black Code Formatting on PR
 
 on:
-  pull_request:
+  push:
     branches:
       - main
-      - staging
-      - dev
 
 jobs:
   pr-lint:
