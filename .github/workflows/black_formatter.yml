@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         name: Checkout
-      - uses: prrao87/black-action@master
+      - uses: prrao87/black-action@v1.0.4
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BLACK_ARGS: "."
