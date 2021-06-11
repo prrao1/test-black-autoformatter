@@ -1,2 +1,2 @@
-# test-black-autoformatter
-Test GitHub actions for auto-formatting Python code using Black
+# Test GitHub Actions
+Test GitHub actions repo for experimenting with CI/CD and auto-linting workflows.
